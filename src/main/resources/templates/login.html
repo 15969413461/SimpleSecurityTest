@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户登录页面</title>
+</head>
+<body>
+<p th:text="${expired}"></p>
+<p th:text="${logout}"></p>
+<p th:text="${error}"></p>
+<p th:text="${sessionInvalid}"></p>
+<form action="/checklogin" method="post">
+    用户名:  <input type="text" name="name"/><br/>
+    密码:   <input type="text" name="pwd"/><br/>
+    记住我: <input type="checkbox" name="rememberMe"/> <br/>
+   		<!-- <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/> -->
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>
